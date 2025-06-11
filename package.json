@@ -1,0 +1,28 @@
+{
+  "name": "tdd-workspace",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChandanaPrabhakar/TDD-Workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChandanaPrabhakar/TDD-Workspace/issues"
+  },
+  "homepage": "https://github.com/ChandanaPrabhakar/TDD-Workspace#readme",
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/register": "^7.27.1",
+    "chai": "^5.2.0",
+    "mocha": "^11.6.0"
+  }
+}
