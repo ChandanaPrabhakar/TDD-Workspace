@@ -306,7 +306,7 @@ This project demonstrates key TDD principles:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - [LICENSE](LICENSE)
 
 ## 🙋‍♂️ Support
 
