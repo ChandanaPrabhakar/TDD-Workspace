@@ -4,7 +4,10 @@
   "description": "Hello World",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register"
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register",
+    "testDist": "npx mocha \"dist/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js",
+    "testDistWatch": "npx mocha \"dist/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js --watch",
+    "coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm run testDist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,16 @@
     "@babel/preset-env": "^7.27.2",
     "@babel/register": "^7.27.1",
     "chai": "^5.2.0",
-    "mocha": "^11.6.0"
+    "chai-exclude": "^3.0.1",
+    "mocha": "^11.6.0",
+    "nyc": "^17.1.0",
+    "regenerator-runtime": "^0.14.1",
+    "sinon": "^20.0.0",
+    "supertest": "^7.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0"
   }
 }
