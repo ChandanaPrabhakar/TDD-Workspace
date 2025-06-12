@@ -4,10 +4,14 @@
   "description": "Hello World",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register",
-    "testDist": "npx mocha \"dist/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js",
-    "testDistWatch": "npx mocha \"dist/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js --watch",
-    "coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm run testDist"
+    "format": "prettier --write .",
+    "test": "npm run test:unit && test:integration",
+    "test:unit": "npx mocha \"unit-test/**/*.test.js\" --recursive --require @babel/register",
+    "test:integration": "npx mocha \"integration-test/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js",
+    "testWatch": "npx mocha \"integration-test/**/*.test.js\" --recursive --require @babel/register --file dist/mocha-setup.js --watch",
+    "coverage": "npm run coverage:unit && npm run coverage:integration",
+    "coverage:unit": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test:unit",
+    "coverage:integration": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test:integration"
   },
   "repository": {
     "type": "git",
