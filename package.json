@@ -33,6 +33,7 @@
     "chai-exclude": "^3.0.1",
     "mocha": "^11.6.0",
     "nyc": "^17.1.0",
+    "prettier": "^3.5.3",
     "regenerator-runtime": "^0.14.1",
     "sinon": "^20.0.0",
     "supertest": "^7.1.1"
